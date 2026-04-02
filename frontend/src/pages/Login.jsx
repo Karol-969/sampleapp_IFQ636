@@ -13,7 +13,7 @@ const Login = () => {
     try {
       const response = await axiosInstance.post('/api/auth/login', formData);
       login(response.data);
-      navigate('/tasks');
+      navigate('/plans');
     } catch (error) {
       alert('Login failed. Please try again.');
     }
@@ -37,7 +37,7 @@ const Login = () => {
           onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
         />
-        <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
+        <button type="submit" className="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700">
           Login
         </button>
       </form>
